@@ -20,6 +20,7 @@ public class SocketClient implements Runnable {
         try {
 
             try {
+
                 InetAddress ipAddress = InetAddress.getByName(address); // создаем объект который отображает вышеописанный IP-адрес
                 socket = new Socket(ipAddress, serverPort); // создаем сокет используя IP-адрес и порт сервера
 
@@ -27,11 +28,7 @@ public class SocketClient implements Runnable {
                 objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
                 objectInputStream = new ObjectInputStream(socket.getInputStream());
 
-                //message = new Message();
 
-                //Actions action = Actions.SignIn;
-                // message = (Message) objectInputStream.readObject(); // принимаю строку сервером;
-                // System.out.println(message.getAction());
 
             } catch (Exception e) {
                 e.printStackTrace();

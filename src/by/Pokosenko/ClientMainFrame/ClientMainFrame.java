@@ -147,7 +147,6 @@ public class ClientMainFrame extends javax.swing.JFrame {
 
     private void RegistrationButtonMouseClicked(java.awt.event.MouseEvent evt) {
 
-        //this.dispose();
         RegistrationFrame regFrame= null;
 
         try {
@@ -157,6 +156,7 @@ public class ClientMainFrame extends javax.swing.JFrame {
         {
             e.printStackTrace();
         }
+
         regFrame.setVisible(true);
       /*  try {
             socketClient.send(Actions.Registration);
